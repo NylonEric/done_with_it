@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { FadeInView } from './animations/fade_in_view';
+import { styles } from './styles/styles.js';
+import { Pulse } from './src/components/circle_pulse';
 
 export default App = () => {
   console.log('App executed');
@@ -10,31 +12,19 @@ export default App = () => {
 
   return (
     <View style={styles.container}>
+       <Image 
+          style={styles.innerCircle}
+          source={{
+            uri: 'https://reactnative.dev/img/tiny_logo.png',
+          }}
+        />
+        <Pulse />
       <FadeInView style={styles.container}>
         <Text style={styles.text}>HELLO WORLD!</Text>
-        <Text style={styles.text}>THIS IS THE BEST APP EVER!</Text>
+        <Text style={styles.text}>WELCOME TO THE BEST APP EVER!</Text>
         <Text style={styles.subtitle}>Open up App.js to start working on your app!</Text>
         <StatusBar style="auto" />
         </FadeInView>
       </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'lightgrey',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: 'blue',
-    justifyContent: 'center',
-  },
-  subtitle: {
-    fontSize: 12,
-    color: 'black'
-  }
-});
