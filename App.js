@@ -16,26 +16,30 @@ export default App = () => {
     <View style={styles.container}>
       
       <FadeInView style={styles.container}>
-        <Pressable 
+        <View style={styles.topView}>
+          <Text style={styles.text}>HELLO WORLD!</Text>
+          <Text style={styles.text}>WELCOME TO THE REACT NATIVE APP!</Text>
+          <Text style={styles.subtitle}>Open up App.js to start working on your app!</Text>
+        </View>
+      </FadeInView>
+      <View style={styles.bottomView}>
+      <Pressable 
+        style={styles.innerCircle}
+        onPress={() => {
+          setPulse((prev) => [...prev, Math.random()]);
+        }}>
+        <Image
           style={styles.innerCircle}
-          onPress={() => {
-            setPulse((prev) => [...prev, Math.random()]);
-          }}>
-          <Image
-            style={styles.innerCircle}
-            source={{
-              uri: 'https://reactnative.dev/img/tiny_logo.png',
-            }}
-          /> 
-        </Pressable>
-        {pulse.map((item, index) => {
-          <Pulse repeat={index === 0} />
-        })}
-        <Text style={styles.text}>GOODBYE CANDICE!</Text>
-        <Text style={styles.text}>HAVE A GREAT WEEKEND!</Text>
-        <Text style={styles.subtitle}>Open up App.js to start working on your app!</Text>
-        <StatusBar style="auto" />
-        </FadeInView>
+          source={{
+            uri: 'https://reactnative.dev/img/tiny_logo.png',
+          }}
+        /> 
+      </Pressable>
+      {pulse.map((item, index) => (
+        <Pulse key={'unique_key_' + index} repeat={index === 0} />
+      ))}
+      <StatusBar style="auto" />
       </View>
+    </View>
   );
-}
+};

@@ -1,12 +1,20 @@
 // inspired by: https://mobiledevtutorials.com/react-native-tinder-loading/
 
 import React, { useEffect, useState } from 'react';
-import { styles } from '../../styles/styles';
-import Animated, { Extrapolate, interpolate, useAnimatedStyle, useSharedValue, withRepeat, withTiming, withDelay, Easing } from 'react-native-reanimated';
+import { styles } from '../../styles/styles.js';
+import Animated, {
+  Extrapolate,
+  interpolate,
+  useAnimatedStyle,
+  useSharedValue,
+  withRepeat,
+  withTiming,
+  withDelay,
+  Easing
+} from 'react-native-reanimated';
 
 export const Pulse = ({ delay = 0, repeat }) => {
   const animation = useSharedValue(0);
-
   useEffect(() => {
     animation.value = withDelay(
       delay,
@@ -20,7 +28,6 @@ export const Pulse = ({ delay = 0, repeat }) => {
       )
     );
   }, []);
-
   const animatedStyles = useAnimatedStyle(() => {
     const opacity = interpolate(
       animation.value,

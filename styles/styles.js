@@ -5,11 +5,24 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor:  '#ecf0f1',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
     padding: 8,
     paddingTop: Constants.statusBarHeight,
-    zIndex: 1
+    // zIndex: -1
+  },
+  topView: {
+    borderColor: 'red',
+    borderWidth: 2,
+    alignItems: 'center',
+  },
+  bottomView: {
+    height: 350,
+    borderColor: 'red',
+    borderWidth: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 50,
   },
   text: {
     fontSize: 32,
@@ -30,14 +43,13 @@ export const styles = StyleSheet.create({
     borderColor: '#e91e63',
     borderWidth: 4,
     backgroundColor: '#ff6090',
-    zIndex: -1,
+    // zIndex: -1,
   },
   innerCircle: {
     width: 80,
     borderRadius: 40,
     height: 80,
-    zIndex: 0,
-    // zIndex: 100,
+    zIndex: 100,
     position: 'absolute',
     backgroundColor: 'white',
   }
