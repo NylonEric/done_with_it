@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image, Pressable } from 'react-native';
 import { FadeInView } from './animations/fade_in_view';
 import { styles } from './styles/styles.js';
 import { Pulse } from './src/components/circle_pulse';
@@ -13,7 +13,7 @@ export default App = () => {
   x.toString();
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       
       <FadeInView style={styles.container}>
         <View style={styles.topView}>
@@ -40,6 +40,6 @@ export default App = () => {
       ))}
       <StatusBar style="auto" />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
