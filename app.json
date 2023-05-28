@@ -2,6 +2,7 @@
   "expo": {
     "name": "done_with_it",
     "slug": "done_with_it",
+    "description": "marketplace demo app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
