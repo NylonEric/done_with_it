@@ -8,6 +8,7 @@ import {
   View,
   SafeAreaView,
   Image,
+  Alert,
   Pressable,
   TouchableOpacity,
   TouchableNativeFeedback,
@@ -37,7 +38,16 @@ export default App = () => {
           <Text style={styles.text}>TOUCH ME!</Text>
         </View>
         </TouchableOpacity> */}
-      <Button title='Click Me' color='orange' onPress={() => console.log('Button Pressed!')}></Button>
+      {/* <Button title='Click Me' color='orange' onPress={() => console.log('Button Pressed!')}></Button> */}
+      {/* <Button title='Click Me' color='orange' onPress={() => Alert.alert('Button Title', 'Button Pressed!', [
+        {text: 'No'},
+        {text: 'Yes'},
+        {text: 'Maybe?'}
+      ])}></Button> */}
+      <Button title='Click Me' onPress={() =>
+        Alert.prompt('My Prompt', 'My Message', (text) => console.log(text)) //only works on iOS
+      }
+      />
       </FadeInView>
       <View style={styles.bottomView}>
       <Pressable 
