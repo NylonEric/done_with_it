@@ -25,7 +25,7 @@ export default App = () => {
   x.toString();
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, {backgroundColor: 'orange'}]}>
       <FadeInView style={styles.container}>
         <View style={styles.topView}>
           <Text style={styles.text}>HELLO WORLD!</Text>
@@ -46,8 +46,7 @@ export default App = () => {
       ])}></Button> */}
       <Button title='Click Me' onPress={() =>
         Alert.prompt('My Prompt', 'My Message', (text) => console.log(text)) //only works on iOS
-      }
-      />
+      }/>
       </FadeInView>
       <View style={styles.bottomView}>
       <Pressable 
