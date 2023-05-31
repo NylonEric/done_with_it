@@ -1,20 +1,23 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, StatusBar, Platform } from 'react-native';
 import Constants from 'expo-constants';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:  '#ecf0f1',
+    // backgroundColor:  '#ecf0f1',
+    backgroundColor: 'lightgrey',
     // alignItems: 'center',
     // justifyContent: 'center',
     padding: 8,
-    paddingTop: Constants.statusBarHeight,
-    // zIndex: -1
+    // paddingTop: Constants.statusBarHeight,
+    paddingTop: Platform.OS === 'Android' ? StatusBar.currentHeight : 0,
+    // zIndex: -1,
   },
   topView: {
     borderColor: 'red',
     borderWidth: 2,
     alignItems: 'center',
+    justifyContent: 'center'
   },
   bottomView: {
     height: 350,
