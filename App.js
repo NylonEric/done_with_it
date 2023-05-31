@@ -13,7 +13,8 @@ import {
   TouchableOpacity,
   TouchableNativeFeedback,
   TouchableHighlight,
-  Button
+  Button,
+  Dimensions
 } from 'react-native';
 // import { TouchableHighlight, TouchableNativeFeedback } from 'react-native-web';
 
@@ -23,6 +24,7 @@ export default App = () => {
 
   let x = 1;
   x.toString();
+  console.log('here are device dimensions: ', Dimensions.get('screen'));
 
   return (
     <SafeAreaView style={[styles.container, {backgroundColor: 'orange'}]}>
