@@ -14,9 +14,11 @@ import {
   TouchableNativeFeedback,
   TouchableHighlight,
   Button,
-  Dimensions
+  Dimensions,
+  useWindowDimensions
 } from 'react-native';
 // import { TouchableHighlight, TouchableNativeFeedback } from 'react-native-web';
+import { useDeviceOrientation } from '@react-native-community/hooks'; //useDimensions is deprecated
 
 export default App = () => {
   console.log('App executed');
@@ -24,7 +26,10 @@ export default App = () => {
 
   let x = 1;
   x.toString();
-  console.log('here are device dimensions: ', Dimensions.get('screen'));
+  // console.log('here are device dimensions: ', Dimensions.get('screen')); // doesn't handle orientation changes
+  const landscape = useDeviceOrientation() === 'landscape';
+  console.log('here are device dimensions: ', landscape, useWindowDimensions()); // handles orientation changes
+
 
   return (
     <SafeAreaView style={[styles.container, {backgroundColor: 'orange'}]}>
@@ -33,7 +38,7 @@ export default App = () => {
           <Text style={styles.text}>HELLO WORLD!</Text>
           <Text style={styles.text}>WELCOME TO THE REACT NATIVE APP!</Text>
           {/* <Text style={styles.subtitle}>Open up App.js to start working on your app!</Text> */}
-        </View>
+        
         {/* <TouchableOpacity onPress={() => console.log('image pressed!')}>
         {/* <Image fadeDuration={1000} blurRadius={5} style={{width: 100, height: 100, alignSelf: 'center'}} source={require('./assets/icon.png')} /> */}
         {/* <View style={{height: 100, width: 200, backgroundColor: 'dodgerblue', alignSelf: 'center', alignItems: 'center', justifyContent: 'center'}}>
@@ -49,8 +54,16 @@ export default App = () => {
       <Button title='Click Me' onPress={() =>
         Alert.prompt('My Prompt', 'My Message', (text) => console.log(text)) //only works on iOS
       }/>
+      <View 
+        style={{
+          backgroundColor: "dodgerblue",
+          width: "100%",
+          height: landscape ? "100%" : "30%",
+        }}
+        ></View>
+        </View>
       </FadeInView>
-      <View style={styles.bottomView}>
+      {/* <View style={styles.bottomView}>
       <Pressable 
         style={styles.innerCircle}
         onPress={() => {
@@ -67,7 +80,7 @@ export default App = () => {
         <Pulse key={'unique_key_' + index} repeat={index === 0} />
       ))}
       <StatusBar style="auto" />
-      </View>
+      </View> */}
     </SafeAreaView>
   );
 };
