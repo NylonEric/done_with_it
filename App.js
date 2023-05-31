@@ -1,9 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, Image, Pressable } from 'react-native';
 import { FadeInView } from './animations/fade_in_view';
 import { styles } from './styles/styles.js';
 import { Pulse } from './src/components/circle_pulse';
+import {
+  Text,
+  View,
+  SafeAreaView,
+  Image,
+  Pressable,
+  TouchableOpacity,
+  TouchableNativeFeedback,
+  TouchableHighlight,
+  Button
+} from 'react-native';
+// import { TouchableHighlight, TouchableNativeFeedback } from 'react-native-web';
 
 export default App = () => {
   console.log('App executed');
@@ -14,13 +25,19 @@ export default App = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      
       <FadeInView style={styles.container}>
         <View style={styles.topView}>
           <Text style={styles.text}>HELLO WORLD!</Text>
           <Text style={styles.text}>WELCOME TO THE REACT NATIVE APP!</Text>
-          <Text style={styles.subtitle}>Open up App.js to start working on your app!</Text>
+          {/* <Text style={styles.subtitle}>Open up App.js to start working on your app!</Text> */}
         </View>
+        {/* <TouchableOpacity onPress={() => console.log('image pressed!')}>
+        {/* <Image fadeDuration={1000} blurRadius={5} style={{width: 100, height: 100, alignSelf: 'center'}} source={require('./assets/icon.png')} /> */}
+        {/* <View style={{height: 100, width: 200, backgroundColor: 'dodgerblue', alignSelf: 'center', alignItems: 'center', justifyContent: 'center'}}>
+          <Text style={styles.text}>TOUCH ME!</Text>
+        </View>
+        </TouchableOpacity> */}
+      <Button title='Click Me' color='orange' onPress={() => console.log('Button Pressed!')}></Button>
       </FadeInView>
       <View style={styles.bottomView}>
       <Pressable 
