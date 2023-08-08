@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { styles } from '../../styles/styles';
 import AppText from '../../src/components/AppText';
+import Icon from '../../src/components/Icon';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const StylePracticeCanvas = (props) => {
   return (
@@ -14,7 +16,12 @@ const StylePracticeCanvas = (props) => {
         fontWeight: "600",
         color: "pink"
       }}>Hello World</Text>
-      <AppText>Goodbye World</AppText>
+      {/* <AppText>Goodbye World</AppText> */}
+      <Icon
+        name="email"
+        size={60}
+        color="lightblue"
+      />
       </View>
     </View> 
   );
