@@ -1,23 +1,81 @@
 import { StyleSheet, StatusBar, Platform } from 'react-native';
 import Constants from 'expo-constants';
 
+import colors from '../app/config/colors';
+
 export const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    justifyContent: "flex-end",
+    alignItems: 'center',
+  },
+  loginButton: {
+    width: "100%",
+    height: 70,
+    backgroundColor: colors.primary
+  },
+  registerButton: {
+    width: "100%",
+    height: 70,
+    backgroundColor: colors.secondary
+  },
+  logo: {
+    height: 100,
+    width: 100,
+  },
+  logoContainer: {
+    position: 'absolute',
+    top: 70,
+    alignItems: "center"
+  },
   container: {
     flex: 1,
+    flexDirection: 'column',
     // backgroundColor:  '#ecf0f1',
-    backgroundColor: 'lightgrey',
+    backgroundColor: colors.black,
     // alignItems: 'center',
     // justifyContent: 'center',
-    padding: 8,
+    // padding: 8,
     // paddingTop: Constants.statusBarHeight,
     paddingTop: Platform.OS === 'Android' ? StatusBar.currentHeight : 0,
     // zIndex: -1,
   },
+  closeIcon: {
+    width: 50,
+    height: 50,
+    backgroundColor: '#fc5c65',
+    // position: 'absolute',
+    // top: 40,
+    // left: 30
+  }, 
+  deleteIcon: {
+    width: 50,
+    height: 50,
+    backgroundColor: '#4ecdc4',
+    borderRadius: 1,
+    borderTopColor: 'blue',
+    borderTopWidth: 5,
+    borderTopLeftRadius: 20,
+    shadowColor: 'grey',
+    shadowOffset: {width: 0, height: 5},
+    shadowOpacity: 1,
+    elevation: 20,
+    // padding: 15,
+    margin: 10,
+    // position: 'absolute',
+    // top: 40,
+    // right: 30
+  },
   topView: {
+    top: 30,
+    padding: 20,
     borderColor: 'red',
     borderWidth: 2,
     alignItems: 'center',
-    justifyContent: 'center'
+    // display: 'flex ',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: 'white',
   },
   bottomView: {
     height: 350,
@@ -26,6 +84,11 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 50,
+  },
+  image: {
+    height: '100%',
+    width: '100%',
+    resizeMode: "contain"
   },
   text: {
     fontSize: 32,
