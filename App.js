@@ -37,10 +37,10 @@ export default App = () => {
 
   return (
 
-    // <WelcomeScreen/>
+    <WelcomeScreen/>
     // <ViewImageScreen/>
     // <StylePracticeCanvas/>
-    <CustomButton/>
+    // <CustomButton/>
     // <SafeAreaView style={[styles.container, {backgroundColor: 'orange'}]}>
     //   <FadeInView style={styles.container}>
     //     <View style={styles.topView}>
