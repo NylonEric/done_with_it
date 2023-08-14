@@ -1,6 +1,8 @@
 import React from 'react';
 import { Image, ImageBackground, View, Text } from 'react-native';
+import CustomButton from './CustomButton';
 import { styles } from '../../styles/styles';
+import colors from '../config/colors';
 
 const WelcomeScreen = (props) => {
   return (
@@ -11,11 +13,15 @@ const WelcomeScreen = (props) => {
     >
       <View style={styles.logoContainer}>
         <Image source={require("../assets/logo-red.png")} style={styles.logo}/>
-        <Text>Sell What You Don't Need</Text>
+        <View style={styles.textRow}>
+          <Text style={styles.subtitle}>Sell What You Don't Need</Text>
+        </View>
       </View>
-      <View style={styles.loginButton}></View>
-      <View style={styles.registerButton}></View>
-    </ImageBackground>
+      <View style={styles.bottomView}>
+        <CustomButton title="LOGIN" style={styles.pressable} color="white" backgroundColor={colors.primary}/>
+        <CustomButton title="REGISTER" style={styles.pressable} color="white" backgroundColor={colors.secondary}/>
+      </View>
+     </ImageBackground>
   );
 };
 

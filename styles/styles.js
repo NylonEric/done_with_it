@@ -81,11 +81,14 @@ export const styles = StyleSheet.create({
     // flex: 1,
     color: "white",
     backgroundColor: colors.primary,
-    height: 50,
-    width: "100%",
+    height: 55,
+    width: "90%",
     borderRadius: 25,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    marginTop: 20,
+    // borderColor: 'red',
+    // borderWidth: 2,
   },
   buttonTitle: {
     color: 'white',
@@ -104,17 +107,23 @@ export const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   bottomView: {
-    height: 350,
-    borderColor: 'red',
-    borderWidth: 2,
+    height: 200,
+    width: "100%",
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 50,
+    marginTop: 100,
+    // borderColor: 'red',
+    // borderWidth: 2,
   },
   image: {
     height: '100%',
     width: '100%',
     resizeMode: "contain"
+  },
+  textRow: {
+    // borderColor: 'red',
+    // borderWidth: 2,
+    marginTop: 20
   },
   text: {
     fontSize: 32,
@@ -124,8 +133,9 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   subtitle: {
-    fontSize: 14,
-    color: 'black'
+    fontSize: 26,
+    color: 'black',
+    fontWeight: 'bold',
   },
   circle: {
     width: 300,

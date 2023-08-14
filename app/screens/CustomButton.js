@@ -2,16 +2,15 @@ import React from 'react';
 import { Pressable, View, Text } from 'react-native';
 import { styles } from '../../styles/styles';
 
-const CustomButton = (props) => {
+const CustomButton = ({title, style, color, backgroundColor}
+) => {
   return (
-    <View style={styles.container}> 
-      <View style={styles.centerContainer}>
-        <Pressable style={styles.pressable} onPress={(e) => {
-          console.log('here is event: ', e.nativeEvent);
-        }}>
-          <Text style={styles.buttonTitle}>LOGIN</Text>
-        </Pressable>
-      </View>
+    <View style={styles.centerContainer}>
+      <Pressable style={[style, backgroundColor={backgroundColor}]} onPress={(e) => {
+        console.log('here is event: ', e.nativeEvent);
+      }}>
+        <Text style={styles.buttonTitle}>{title}</Text>
+      </Pressable>
     </View>
   )
 };
