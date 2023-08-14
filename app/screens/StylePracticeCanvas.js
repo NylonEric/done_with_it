@@ -3,7 +3,6 @@ import { View, Text } from 'react-native';
 import { styles } from '../../styles/styles';
 import AppText from '../../src/components/AppText';
 import Icon from '../../src/components/Icon';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const StylePracticeCanvas = (props) => {
   return (

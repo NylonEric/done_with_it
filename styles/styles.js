@@ -30,11 +30,13 @@ export const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    // borderColor: "black",
+    // borderRadius: 4,
     flexDirection: 'column',
-    // backgroundColor:  '#ecf0f1',
-    backgroundColor: colors.black,
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    backgroundColor:  '#ecf0f1',
+    // backgroundColor: colors.black,
+    alignItems: 'center',
+    justifyContent: 'center',
     // padding: 8,
     // paddingTop: Constants.statusBarHeight,
     paddingTop: Platform.OS === 'Android' ? StatusBar.currentHeight : 0,
@@ -65,6 +67,30 @@ export const styles = StyleSheet.create({
     // position: 'absolute',
     // top: 40,
     // right: 30
+  },
+  centerContainer: {
+    // height: '50%',
+    width: '100%',
+    // borderColor: 'red',
+    // borderWidth: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    // marginTop: 50,
+  },
+  pressable: {
+    // flex: 1,
+    color: "white",
+    backgroundColor: colors.primary,
+    height: 50,
+    width: "100%",
+    borderRadius: 25,
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  buttonTitle: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold'
   },
   topView: {
     top: 30,
