@@ -18,8 +18,8 @@ const WelcomeScreen = (props) => {
         </View>
       </View>
       <View style={styles.bottomView}>
-        <CustomButton title="LOGIN" style={styles.pressable} color="white" backgroundColor={colors.primary}/>
-        <CustomButton title="REGISTER" style={styles.pressable} color="white" backgroundColor={colors.secondary}/>
+        <CustomButton title="LOGIN" style={styles.pressable} color="white" backgroundColor={colors.primary} pressedColor={colors.primaryPressed}/>
+        <CustomButton title="REGISTER" style={styles.pressable} color="white" backgroundColor={colors.secondary} pressedColor={colors.secondaryPressed}/>
       </View>
      </ImageBackground>
   );
