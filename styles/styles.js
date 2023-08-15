@@ -116,8 +116,9 @@ export const styles = StyleSheet.create({
     // borderWidth: 2,
   },
   image: {
-    height: '100%',
-    width: '100%',
+    height: 100,
+    width: 100,
+    alignSelf: 'center',
     resizeMode: "contain"
   },
   textRow: {

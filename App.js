@@ -23,6 +23,7 @@ import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import StylePracticeCanvas from './app/screens/StylePracticeCanvas';
 import CustomButton from './app/screens/CustomButton';
+import CardStage from './app/screens/CardStage';
 
 export default App = () => {
   console.log('App executed');
@@ -37,10 +38,12 @@ export default App = () => {
 
   return (
 
-    <WelcomeScreen/>
+    // <WelcomeScreen/>
     // <ViewImageScreen/>
     // <StylePracticeCanvas/>
     // <CustomButton/>
+    <CardStage/>
+
     // <SafeAreaView style={[styles.container, {backgroundColor: 'orange'}]}>
     //   <FadeInView style={styles.container}>
     //     <View style={styles.topView}>
