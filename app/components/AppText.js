@@ -3,7 +3,7 @@ import { Text, StyleSheet, Platform } from 'react-native';
 import colors from '../config/colors';
 
 function AppText({style, children}) {
-  return <Text style={[style]}>{children}</Text>
+  return <Text style={[styles.text, style]}>{children}</Text>
 };
 
 const styles = StyleSheet.create({
