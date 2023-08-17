@@ -1,28 +1,18 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import Card from '../components/Card';
+import { styles } from '../../styles/styles';
 
 const CardStage = (props) => {
-  <View style={{
-    height: 200,
-    borderColor: "red",
-    borderWidth: 2,
-  }}>
-    <Card 
-      title="Red jacket for sale!"
-      subtitle={100}
-      imageSource="../../app/assets/jacket.jpg"
-    />
-  </View>
+  return (
+    <View style={styles.cardStage}>
+      <Card 
+        title="Red jacket for sale!"
+        subtitle={100}
+        imageSource={require("../assets/jacket.jpg")}
+      />
+    </View>
+  )
 };
-
-const style = StyleSheet.create({
-  upperPage: {
-    backgroundColor: "blue",
-    height: 200,
-    borderColor: "red",
-    borderWidth: 2,
-  }
-});
 
 export default CardStage;

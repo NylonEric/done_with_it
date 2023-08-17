@@ -29,7 +29,7 @@ export default App = () => {
   console.log('App executed');
   const [pulse, setPulse] = useState([1]);
 
-  let x = 1;
+  // let x = 1;
   // x.toString();
   // console.log('here are device dimensions: ', Dimensions.get('screen')); // doesn't handle orientation changes
   const landscape = useDeviceOrientation() === 'landscape';

@@ -1,11 +1,20 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import styles from '../../styles/styles';
+import { styles } from '../../styles/styles';
+import AppText from '../components/AppText';
 
 const Card = ({title, subtitle, imageSource}) => {
-  <View>
-    <Image source={require("../assets/jacket.jpg")} style={styles.image}/>
-  </View>
+  return (
+    <View style={styles.card}>
+      <View style={styles.imageContainer}>
+        <Image source={imageSource} style={styles.image} resizeMode='cover'/>
+      </View>
+      <View style={styles.cardTab}>
+        <AppText style={styles.cardTitle}>{title}</AppText>
+        <AppText style={styles.cardSubtitle}>{subtitle}</AppText>
+      </View>
+    </View>
+  )
 };
 
 export default Card;

@@ -91,20 +91,21 @@ export const styles = StyleSheet.create({
     // borderWidth: 2,
   },
   buttonTitle: {
-    color: 'white',
+    color: "white",
     fontSize: 20,
-    fontWeight: 'bold'
+    textTransform: "uppercase",
+    fontWeight: "bold"
   },
   topView: {
     top: 30,
     padding: 20,
-    borderColor: 'red',
-    borderWidth: 2,
     alignItems: 'center',
     // display: 'flex ',
     flexDirection: 'row',
     justifyContent: 'space-around',
     backgroundColor: 'white',
+    // borderColor: 'red',
+    // borderWidth: 2,
   },
   bottomView: {
     height: 200,
@@ -116,10 +117,44 @@ export const styles = StyleSheet.create({
     // borderWidth: 2,
   },
   image: {
-    height: 100,
-    width: 100,
+    height: 200,
+    width: "100%",
     alignSelf: 'center',
-    resizeMode: "contain"
+  },
+  cardStage: {
+    backgroundColor: "#ebe9e9",
+      height: "45%",
+      paddingTop: "15%",
+      // borderColor: "red",
+      // borderWidth: 2,
+  },
+  card: {
+    margin: "5%",
+    // height: "100%",
+    borderRadius: "35%",
+    overflow: "hidden",
+    backgroundColor: "white",
+    // borderColor: "green",
+    // borderWidth: 2,
+  },
+  imageContainer: {
+    alignContent: "center",
+    // height: "80%",
+    // borderColor: "blue",
+    // borderWidth: 2,
+  },
+  cardTab: {
+    padding: 20,
+  },
+  cardTitle: {
+    fontSize: 18,
+    // paddingBottom: 7,
+    marginBottom: 7
+  },
+  cardSubtitle: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: colors.secondary,
   },
   textRow: {
     // borderColor: 'red',
