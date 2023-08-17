@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image, ImageBackground, View, Text } from 'react-native';
-import { styles } from '../../styles/styles';
+import { styles } from '../styles/styles';
 
 export default function ViewImageScreen(props) {
   return (

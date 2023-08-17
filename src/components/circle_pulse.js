@@ -1,7 +1,7 @@
 // inspired by: https://mobiledevtutorials.com/react-native-tinder-loading/
 
 import React, { useEffect, useState } from 'react';
-import { styles } from '../../styles/styles.js';
+import { styles } from '../../app/styles/styles.js';
 import Animated, {
   Extrapolate,
   interpolate,

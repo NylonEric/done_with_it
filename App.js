@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { FadeInView } from './animations/fade_in_view';
-import { styles } from './styles/styles.js';
+import { styles } from './app/styles/styles.js';
 import { Pulse } from './src/components/circle_pulse';
 import {
   Text,
@@ -24,6 +24,7 @@ import ViewImageScreen from './app/screens/ViewImageScreen';
 import StylePracticeCanvas from './app/screens/StylePracticeCanvas';
 import CustomButton from './app/screens/CustomButton';
 import CardStage from './app/screens/CardStage';
+import ListDetailScreen from './app/screens/ListDetailScreen';
 
 export default App = () => {
   console.log('App executed');
@@ -42,7 +43,8 @@ export default App = () => {
     // <ViewImageScreen/>
     // <StylePracticeCanvas/>
     // <CustomButton/>
-    <CardStage/>
+    // <CardStage/>
+    <ListDetailScreen/>
 
     // <SafeAreaView style={[styles.container, {backgroundColor: 'orange'}]}>
     //   <FadeInView style={styles.container}>

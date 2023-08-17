@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import { styles } from '../../styles/styles';
+import { styles } from '../styles/styles';
 import AppText from '../components/AppText';
 
 const Card = ({title, subtitle, imageSource}) => {
@@ -9,7 +9,7 @@ const Card = ({title, subtitle, imageSource}) => {
       <View style={styles.imageContainer}>
         <Image source={imageSource} style={styles.image} resizeMode='cover'/>
       </View>
-      <View style={styles.cardTab}>
+      <View style={styles.detailsContainer}>
         <AppText style={styles.cardTitle}>{title}</AppText>
         <AppText style={styles.cardSubtitle}>{subtitle}</AppText>
       </View>
