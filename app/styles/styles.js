@@ -32,15 +32,23 @@ export const styles = StyleSheet.create({
     flex: 1,
     // borderColor: "black",
     // borderRadius: 4,
-    flexDirection: 'column',
-    backgroundColor:  '#ecf0f1',
-    // backgroundColor: colors.black,
-    alignItems: 'center',
-    justifyContent: 'center',
+    // flexDirection: 'column',
+    // backgroundColor:  '#ecf0f1',
+    backgroundColor: colors.black,
+    // alignItems: 'center',
+    // justifyContent: 'center',
     // padding: 8,
     // paddingTop: Constants.statusBarHeight,
     paddingTop: Platform.OS === 'Android' ? StatusBar.currentHeight : 0,
     // zIndex: -1,
+  },
+  viewScreenContainer: {
+    flex: 1,
+    backgroundColor: colors.black,
+    // borderWidth: 2,
+    // borderColor: "purple",
+    // padding: 3,
+    // margin: 3,
   },
   listContainer: {
     flexDirection: "row",
@@ -52,7 +60,17 @@ export const styles = StyleSheet.create({
     // position: 'absolute',
     // top: 40,
     // left: 30
-  }, 
+  },
+  closeMaterialIcon: {
+    // position: 'absolute',
+    // top: 40,
+    paddingLeft: "10%",
+  },
+  deleteMaterialIcon: {
+    // position: "absolute",
+    // top: 40,
+    paddingRight: "10%",
+  },
   deleteIcon: {
     width: 50,
     height: 50,
@@ -110,6 +128,13 @@ export const styles = StyleSheet.create({
     // borderColor: 'red',
     // borderWidth: 2,
   },
+  viewScreenTopView: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: "10%",
+    //  borderColor: "green",
+    // borderWidth: 3,
+  },
   bottomView: {
     height: 200,
     width: "100%",
@@ -123,6 +148,11 @@ export const styles = StyleSheet.create({
     height: 200,
     width: "100%",
     alignSelf: 'center',
+  },
+  imageScreenImage: {
+    position: "absolute",
+    height: "100%",
+    width: "100%",
   },
   listImage: {
     height: 70,
