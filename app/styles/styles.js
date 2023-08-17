@@ -1,7 +1,7 @@
 import { StyleSheet, StatusBar, Platform } from 'react-native';
 import Constants from 'expo-constants';
 
-import colors from '../app/config/colors';
+import colors from '../config/colors';
 
 export const styles = StyleSheet.create({
   background: {
@@ -41,6 +41,9 @@ export const styles = StyleSheet.create({
     // paddingTop: Constants.statusBarHeight,
     paddingTop: Platform.OS === 'Android' ? StatusBar.currentHeight : 0,
     // zIndex: -1,
+  },
+  listContainer: {
+    flexDirection: "row",
   },
   closeIcon: {
     width: 50,
@@ -121,6 +124,25 @@ export const styles = StyleSheet.create({
     width: "100%",
     alignSelf: 'center',
   },
+  listImage: {
+    height: 70,
+    width: 70,
+    borderRadius: 35,
+    marginRight: 10,
+  },
+  userContainer: {
+    marginVertical: 50,
+    borderWidth: 2,
+    borderColor: "pink",
+  },
+  userTitle: {
+    fontSize: 24,
+    fontWeight: "500",
+  },
+  userSubTitle: {
+    fontSize: 20,
+    color: colors.medium,
+  },
   cardStage: {
     backgroundColor: "#ebe9e9",
       height: "45%",
@@ -143,7 +165,7 @@ export const styles = StyleSheet.create({
     // borderColor: "blue",
     // borderWidth: 2,
   },
-  cardTab: {
+  detailsContainer: {
     padding: 20,
   },
   cardTitle: {
@@ -152,9 +174,15 @@ export const styles = StyleSheet.create({
     marginBottom: 7
   },
   cardSubtitle: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "bold",
     color: colors.secondary,
+  },
+  price: {
+    color: colors.secondary,
+    fontSize: 20,
+    fontWeight: "500",
+    marginVertical: 10,
   },
   textRow: {
     // borderColor: 'red',
@@ -167,6 +195,11 @@ export const styles = StyleSheet.create({
     color: 'blue',
     textAlign: 'center',
     justifyContent: 'center',
+  },
+  appText: {
+    fontSize: 30,
+    color: colors.black,
+    fontFamily: Platform.OS === 'android' ? "Roboto" : "Avenir",
   },
   subtitle: {
     fontSize: 26,

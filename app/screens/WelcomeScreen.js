@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, ImageBackground, View, Text } from 'react-native';
 import CustomButton from './CustomButton';
-import { styles } from '../../styles/styles';
+import { styles } from '../styles/styles';
 import colors from '../config/colors';
 
 const WelcomeScreen = (props) => {

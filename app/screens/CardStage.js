@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import Card from '../components/Card';
-import { styles } from '../../styles/styles';
+import { styles } from '../styles/styles';
 
 const CardStage = (props) => {
   return (
