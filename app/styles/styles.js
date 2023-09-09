@@ -44,6 +44,7 @@ export const styles = StyleSheet.create({
   },
   screen: {
     paddingTop: Constants.statusBarHeight,
+    backgroundColor: "white",
   },
   viewScreenContainer: {
     flex: 1,
@@ -55,6 +56,12 @@ export const styles = StyleSheet.create({
   },
   listContainer: {
     flexDirection: "row",
+    padding: 15,
+  },
+  separator: {
+    width: "100%",
+    height: 1,
+    backgroundColor: colors.light,
   },
   closeIcon: {
     width: 50,
