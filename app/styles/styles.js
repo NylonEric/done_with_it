@@ -45,6 +45,7 @@ export const styles = StyleSheet.create({
   screen: {
     paddingTop: Constants.statusBarHeight,
     backgroundColor: "white",
+    flex: 1,
   },
   viewScreenContainer: {
     flex: 1,

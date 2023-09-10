@@ -45,9 +45,12 @@ export default App = () => {
     // <ViewImageScreen/>
     // <StylePracticeCanvas/>
     // <CustomButton/>
+
     // <CardStage/>
     // <ListDetailScreen/>
+
     <GestureHandlerRootView style={{flex: 1}}>
+
       <MessagesScreen/>
     </GestureHandlerRootView>
 
