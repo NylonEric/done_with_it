@@ -195,7 +195,7 @@ export const styles = StyleSheet.create({
   card: {
     margin: "5%",
     // height: "100%",
-    borderRadius: "35%",
+    borderRadius: 20,
     overflow: "hidden",
     backgroundColor: "white",
     // borderColor: "green",
@@ -208,7 +208,7 @@ export const styles = StyleSheet.create({
     // borderWidth: 2,
   },
   detailsContainer: {
-    // padding: 20,
+    padding: 15,
     marginLeft: 10,
     justifyContent: "space-evenly",
     // borderColor: "purple",
