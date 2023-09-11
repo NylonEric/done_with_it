@@ -27,8 +27,8 @@ import CardStage from './app/screens/CardStage';
 import ListDetailScreen from './app/screens/ListDetailScreen';
 import MessagesScreen from './app/screens/MessagesScreen';
 import IconCanvas from './app/screens/IconCanvas';
-import MyAccount from './app/screens/MyAccount';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import AccountScreen from './app/screens/AccountScreen';
 
 export default App = () => {
   console.log('App executed');
@@ -54,7 +54,7 @@ export default App = () => {
     <GestureHandlerRootView style={{flex: 1}}>
       {/* <IconCanvas/> */}
       {/* <MessagesScreen/> */}
-      <MyAccount/>
+      <AccountScreen/>
     </GestureHandlerRootView>
 
     // <SafeAreaView style={[styles.container, {backgroundColor: 'orange'}]}>

@@ -58,8 +58,7 @@ export const styles = StyleSheet.create({
   listContainer: {
     flexDirection: "row",
     padding: 15,
-    // borderColor: "blue",
-    // borderWidth: 1,
+    backgroundColor: colors.white,
   },
   separator: {
     width: "100%",
