@@ -58,6 +58,8 @@ export const styles = StyleSheet.create({
   listContainer: {
     flexDirection: "row",
     padding: 15,
+    // borderColor: "blue",
+    // borderWidth: 1,
   },
   separator: {
     width: "100%",
@@ -177,11 +179,11 @@ export const styles = StyleSheet.create({
     borderColor: "pink",
   },
   userTitle: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: "500",
   },
   userSubTitle: {
-    fontSize: 20,
+    fontSize: 18,
     color: colors.medium,
   },
   cardStage: {
@@ -207,7 +209,11 @@ export const styles = StyleSheet.create({
     // borderWidth: 2,
   },
   detailsContainer: {
-    padding: 20,
+    // padding: 20,
+    marginLeft: 10,
+    justifyContent: "space-evenly",
+    // borderColor: "purple",
+    // borderWidth: 1,
   },
   cardTitle: {
     fontSize: 18,
