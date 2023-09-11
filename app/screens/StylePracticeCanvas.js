@@ -19,7 +19,7 @@ const StylePracticeCanvas = (props) => {
       <Icon
         name="email"
         size={60}
-        color="lightblue"
+        iconColor="lightblue"
       />
       </View>
     </View> 

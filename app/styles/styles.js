@@ -30,17 +30,22 @@ export const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    // borderColor: "black",
     // borderRadius: 4,
     // flexDirection: 'column',
-    // backgroundColor:  '#ecf0f1',
-    backgroundColor: colors.black,
+    backgroundColor:  '#ecf0f1',
+    // backgroundColor: colors.black,
     // alignItems: 'center',
     // justifyContent: 'center',
     // padding: 8,
     // paddingTop: Constants.statusBarHeight,
     paddingTop: Platform.OS === 'Android' ? StatusBar.currentHeight : 0,
-    // zIndex: -1,
+    // borderColor: "purple",
+    // borderWidth: 3,
+  },
+  screen: {
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: "white",
+    flex: 1,
   },
   viewScreenContainer: {
     flex: 1,
@@ -52,6 +57,14 @@ export const styles = StyleSheet.create({
   },
   listContainer: {
     flexDirection: "row",
+    padding: 15,
+    // borderColor: "blue",
+    // borderWidth: 1,
+  },
+  separator: {
+    width: "100%",
+    height: 1,
+    backgroundColor: colors.light,
   },
   closeIcon: {
     width: 50,
@@ -166,11 +179,11 @@ export const styles = StyleSheet.create({
     borderColor: "pink",
   },
   userTitle: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: "500",
   },
   userSubTitle: {
-    fontSize: 20,
+    fontSize: 18,
     color: colors.medium,
   },
   cardStage: {
@@ -196,7 +209,11 @@ export const styles = StyleSheet.create({
     // borderWidth: 2,
   },
   detailsContainer: {
-    padding: 20,
+    // padding: 20,
+    marginLeft: 10,
+    justifyContent: "space-evenly",
+    // borderColor: "purple",
+    // borderWidth: 1,
   },
   cardTitle: {
     fontSize: 18,
