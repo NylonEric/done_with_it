@@ -1,9 +1,13 @@
 import React from 'react'
-import { SafeAreaView } from 'react-native'
+import { View, SafeAreaView } from 'react-native'
 import { styles } from '../styles/styles';
 
 export default function Screen({ children, style }) {
   return (
-    <SafeAreaView style={[styles.screen, style]}>{children}</SafeAreaView>
+    <SafeAreaView style={[styles.screen, style]}>
+      <View style={style}>
+        {children}
+      </View>
+    </SafeAreaView>
   )
 };

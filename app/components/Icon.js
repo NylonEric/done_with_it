@@ -8,7 +8,7 @@ export default function Icon({name, size, backgroundColor, iconColor}) {
     <View style={{
       width: size || 50,
       height: size || 50,
-      borderRadius: size ? size / 2 : 25,
+      borderRadius: size * 0.5 || 25,
       backgroundColor: backgroundColor || colors.black,
       justifyContent: "center",
       alignItems: "center",
