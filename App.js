@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Platform } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { FadeInView } from './animations/fade_in_view';
 import { styles } from './app/styles/styles.js';
@@ -32,6 +33,7 @@ import AccountScreen from './app/screens/AccountScreen';
 import ListingsScreen from './app/screens/ListingsScreen';
 import TextInput from './app/components/AppTextInput';
 import AppTextInput from './app/components/AppTextInput';
+import AppSwitch from './app/components/AppSwitch';
 
 export default App = () => {
   console.log('App executed');
@@ -41,8 +43,8 @@ export default App = () => {
   // x.toString();
   // console.log('here are device dimensions: ', Dimensions.get('screen')); // doesn't handle orientation changes
   const landscape = useDeviceOrientation() === 'landscape';
-  console.log('here are device dimensions: ', landscape, useWindowDimensions()); // handles orientation changes
-
+  const platform = Platform.OS;
+  console.log(`platform: ${platform}\nhere are device dimensions:\nlandscape: ${landscape}\n`, useWindowDimensions()); // handles orientation changes
 
   return (
 
@@ -59,7 +61,14 @@ export default App = () => {
       {/* <MessagesScreen/> */}
       {/* <AccountScreen/> */}
       {/* <ListingsScreen /> */}
-      <AppTextInput />
+      
+      {/* <AppTextInput icon="email"
+        placeholder="First Name"
+        // keyboardType='default'
+        // clearButtonMode="always"
+        // secureTextEntry 
+      /> */}
+      <AppSwitch />
     </GestureHandlerRootView>
 
     // <SafeAreaView style={[styles.container, {backgroundColor: 'orange'}]}>
