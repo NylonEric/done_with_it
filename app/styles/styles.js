@@ -245,7 +245,7 @@ export const styles = StyleSheet.create({
   appText: {
     fontSize: 30,
     color: colors.black,
-    fontFamily: Platform.OS === 'android' ? "Roboto" : "Avenir",
+    fontFamily: Platform.OS === 'Android' ? "Roboto" : "Avenir",
   },
   subtitle: {
     fontSize: 26,

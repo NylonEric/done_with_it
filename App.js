@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Platform } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { FadeInView } from './animations/fade_in_view';
 import { styles } from './app/styles/styles.js';
@@ -19,6 +20,7 @@ import {
 } from 'react-native';
 // import { TouchableHighlight, TouchableNativeFeedback } from 'react-native-web';
 import { useDeviceOrientation } from '@react-native-community/hooks'; //useDimensions is deprecated
+import Screen from './app/components/Screen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import StylePracticeCanvas from './app/screens/StylePracticeCanvas';
@@ -30,6 +32,11 @@ import IconCanvas from './app/screens/IconCanvas';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingsScreen from './app/screens/ListingsScreen';
+import TextInput from './app/components/AppTextInput';
+import AppTextInput from './app/components/AppTextInput';
+import AppSwitch from './app/components/AppSwitch';
+import AppPicker from './app/components/AppPicker';
+import ComponentStage from './app/screens/ComponentStage';
 
 export default App = () => {
   console.log('App executed');
@@ -39,26 +46,47 @@ export default App = () => {
   // x.toString();
   // console.log('here are device dimensions: ', Dimensions.get('screen')); // doesn't handle orientation changes
   const landscape = useDeviceOrientation() === 'landscape';
-  console.log('here are device dimensions: ', landscape, useWindowDimensions()); // handles orientation changes
+  const platform = Platform.OS;
+  console.log(`platform: ${platform}\nhere are device dimensions:\nlandscape: ${landscape}\n`, useWindowDimensions()); // handles orientation changes
 
-
+  const categories = [
+    {label: "Furniture", value: 1},
+    {label: "Clothing", value: 2},
+    {label: "Cameras", value: 3}
+  ];
+const [category, setCategory] = useState(categories[0])
   return (
-
-    // <WelcomeScreen/>
-    // <ViewImageScreen/>
-    // <StylePracticeCanvas/>
-    // <CustomButton/>
-
-    // <CardStage/>
-    // <ListDetailScreen/>
-
     <GestureHandlerRootView style={{flex: 1}}>
+      {/* <WelcomeScreen/> */}
+      {/* <ViewImageScreen/> */}
+      {/* <StylePracticeCanvas/> */}
+      {/* <CustomButton/> */}
+      {/* <CardStage/> */}
+      {/* <ListDetailScreen/> */}
       {/* <IconCanvas/> */}
       {/* <MessagesScreen/> */}
       {/* <AccountScreen/> */}
-      <ListingsScreen />
+      {/* <ListingsScreen /> */}
+      {/* <AppSwitch /> */}
+
+      <ComponentStage>
+        <AppPicker
+          selectedItem={category}
+          onSelectItem={item => setCategory(item)}
+          icon="apps"
+          items={categories}
+          placeholder="Category" />
+        <AppTextInput
+          icon="email"
+          placeholder="First Name"
+          // keyboardType='default'
+          // clearButtonMode="always"
+          // secureTextEntry 
+        />
+      </ComponentStage>
     </GestureHandlerRootView>
 
+    // TODO: pulse circle component: extract to components 
     // <SafeAreaView style={[styles.container, {backgroundColor: 'orange'}]}>
     //   <FadeInView style={styles.container}>
     //     <View style={styles.topView}>
