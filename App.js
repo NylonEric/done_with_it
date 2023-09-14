@@ -49,6 +49,12 @@ export default App = () => {
   const platform = Platform.OS;
   console.log(`platform: ${platform}\nhere are device dimensions:\nlandscape: ${landscape}\n`, useWindowDimensions()); // handles orientation changes
 
+  const categories = [
+    {label: "Furniture", value: 1},
+    {label: "Clothing", value: 2},
+    {label: "Cameras", value: 3}
+  ];
+const [category, setCategory] = useState(categories[0])
   return (
     <GestureHandlerRootView style={{flex: 1}}>
       {/* <WelcomeScreen/> */}
@@ -64,7 +70,12 @@ export default App = () => {
       {/* <AppSwitch /> */}
 
       <ComponentStage>
-        <AppPicker icon="apps" placeholder="Category" />
+        <AppPicker
+          selectedItem={category}
+          onSelectItem={item => setCategory(item)}
+          icon="apps"
+          items={categories}
+          placeholder="Category" />
         <AppTextInput
           icon="email"
           placeholder="First Name"
