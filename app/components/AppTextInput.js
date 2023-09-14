@@ -1,24 +1,19 @@
-import { View, TextInput, StyleSheet, Platform } from 'react-native'
+import { View, TextInput, StyleSheet } from 'react-native'
 import React, { useState } from 'react'
-import Screen from './Screen'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import defaultStyles from '../config/styles';
 
 export default function AppTextInput({ icon, ...otherProps }) {
   const [firstName, setFirstName] = useState("");
   return (
-    <Screen>
-      <View style={styles.container}>
-        {icon && <MaterialCommunityIcons name={icon} size={20} color={defaultStyles.colors.medium} style={styles.icon}/>}
-        {/* <Text>{firstName}</Text> */}
-        <TextInput
-          style={defaultStyles.text} 
-          onChangeText={(text) => setFirstName(text)}
-          {...otherProps} 
-        />
-      </View>
-      
-    </Screen>
+    <View style={styles.container}>
+      {icon && <MaterialCommunityIcons name={icon} size={20} color={defaultStyles.colors.medium} style={styles.icon}/>}
+      <TextInput
+        style={defaultStyles.text} 
+        onChangeText={(text) => setFirstName(text)}
+        {...otherProps} 
+      />
+    </View>
   )
 };
 
