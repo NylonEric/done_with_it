@@ -9,4 +9,4 @@ export default function ComponentStage({ children }) {
       <View>{children}</View>
     </Screen>
   )
-}
+};

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, ImageBackground, View, Text } from 'react-native';
-import CustomButton from './CustomButton';
+import AppButton from '../components/AppButton';
 import { styles } from '../styles/styles';
 import colors from '../config/colors';
 
@@ -18,8 +18,8 @@ const WelcomeScreen = (props) => {
         </View>
       </View>
       <View style={styles.bottomView}>
-        <CustomButton title="LOGIN" style={styles.pressable} color="white" backgroundColor={colors.primary}/>
-        <CustomButton title="REGISTER" style={styles.pressable} color="white" backgroundColor={colors.secondary}/>
+        <AppButton title="LOGIN" style={styles.pressable} color="white" backgroundColor={colors.primary}/>
+        <AppButton title="REGISTER" style={styles.pressable} color="white" backgroundColor={colors.secondary}/>
       </View>
      </ImageBackground>
   );
