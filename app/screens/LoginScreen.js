@@ -4,7 +4,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import Screen from '../components/Screen';
-import AppButton from '../components/AppButton';
+import SubmitButton from '../components/SubmitButton';
 import AppFormField from '../components/AppFormField';
 
 const validationSchema = Yup.object().shape({
@@ -20,7 +20,7 @@ export default function LoginScreen() {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
+        {() => (
           <>
             <Image style={styles.logo} source={require('../assets/logo-red.png')}></Image>
             <AppFormField
@@ -42,7 +42,7 @@ export default function LoginScreen() {
               textContentType="password"
               secureTextEntry
             />
-            <AppButton title="Login" onPress={handleSubmit}/>
+            <SubmitButton title="Login" />
           </>
         )}
       </Formik>
