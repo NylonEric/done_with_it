@@ -3,7 +3,7 @@ import React from 'react'
 import Screen from '../components/Screen'
 import { styles } from '../styles/styles'
 import { AppForm, AppFormField, SubmitButton } from '../components/Forms';
-import { validationSchema } from '../config/validation';
+import { validationSchemaRegister } from '../config/validation';
 
 const RegistrerScreen = () => {
   const initialValues={ name: '', email: '', password: '' };
@@ -16,7 +16,7 @@ const RegistrerScreen = () => {
           console.log(values);
           resetForm({values: ''});
         }}
-        validationSchema={validationSchema}
+        validationSchema={validationSchemaRegister}
       >
         <AppFormField
           name="name"
