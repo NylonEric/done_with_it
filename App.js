@@ -24,7 +24,7 @@ import Screen from './app/components/Screen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import StylePracticeCanvas from './app/screens/StylePracticeCanvas';
-import CustomButton from './app/screens/CustomButton';
+import AppButton from './app/components/AppButton';
 import CardStage from './app/screens/CardStage';
 import ListDetailScreen from './app/screens/ListDetailScreen';
 import MessagesScreen from './app/screens/MessagesScreen';
@@ -37,6 +37,8 @@ import AppTextInput from './app/components/AppTextInput';
 import AppSwitch from './app/components/AppSwitch';
 import AppPicker from './app/components/AppPicker';
 import ComponentStage from './app/screens/ComponentStage';
+import LoginScreen from './app/screens/LoginScreen';
+import RegisterScreen from './app/screens/RegisterScreen';
 
 export default App = () => {
   console.log('App executed');
@@ -60,7 +62,7 @@ const [category, setCategory] = useState(categories[0])
       {/* <WelcomeScreen/> */}
       {/* <ViewImageScreen/> */}
       {/* <StylePracticeCanvas/> */}
-      {/* <CustomButton/> */}
+      {/* <AppButton title="Login" onPress={() => console.log('here is button')}/> */}
       {/* <CardStage/> */}
       {/* <ListDetailScreen/> */}
       {/* <IconCanvas/> */}
@@ -68,8 +70,7 @@ const [category, setCategory] = useState(categories[0])
       {/* <AccountScreen/> */}
       {/* <ListingsScreen /> */}
       {/* <AppSwitch /> */}
-
-      <ComponentStage>
+      {/* <ComponentStage>
         <AppPicker
           selectedItem={category}
           onSelectItem={item => setCategory(item)}
@@ -83,7 +84,9 @@ const [category, setCategory] = useState(categories[0])
           // clearButtonMode="always"
           // secureTextEntry 
         />
-      </ComponentStage>
+      </ComponentStage> */}
+      {/* <LoginScreen /> */}
+      <RegisterScreen />
     </GestureHandlerRootView>
 
     // TODO: pulse circle component: extract to components 
