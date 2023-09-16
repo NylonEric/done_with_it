@@ -21,7 +21,7 @@ export default function LoginScreen() {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        {({ handleChange, handleSubmit, errors }) => (
+        {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
           <>
             <Image style={styles.logo} source={require('../assets/logo-red.png')}></Image>
             <AppTextInput
@@ -31,9 +31,10 @@ export default function LoginScreen() {
               autoCorrect={false}
               keyboardType="email-address"
               textContentType="emailAddress"
+              onBlur={() => setFieldTouched("email")}
               onChangeText={handleChange("email")}
             />
-            <ErrorMessage error={errors.email}></ErrorMessage>
+            <ErrorMessage error={errors.email} visible={touched.email}></ErrorMessage>
             <AppTextInput
               icon="lock"
               placeholder="Password"
@@ -43,8 +44,9 @@ export default function LoginScreen() {
               textContentType="password"
               secureTextEntry
               onChangeText={handleChange("password")}
+              onBlur={() => setFieldTouched("password")}
               />
-              <ErrorMessage error={errors.password}></ErrorMessage>
+              <ErrorMessage error={errors.password} visible={touched.password}></ErrorMessage>
 
             <AppButton title="Login" onPress={handleSubmit}/>
           </>
