@@ -31,16 +31,4 @@ const styles = StyleSheet.create({
   }
 });
 
-// const AppButton = ({title, onPress, style, color, backgroundColor}) => {
-//   console.log('rendered!');
-//   return (
-//     <Pressable onPress={onPress}>
-//       {/* //style={[style, backgroundColor={backgroundColor}]}  */}
-//       <View style={[styles.button, style]}>
-//         <Text style={styles.buttonTitle}>{title} what what!?</Text>
-//       </View>     
-//     </Pressable>
-//   )
-// };
-
 export default AppButton;
