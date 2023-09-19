@@ -39,6 +39,7 @@ import AppPicker from './app/components/AppPicker';
 import ComponentStage from './app/screens/ComponentStage';
 import LoginScreen from './app/screens/LoginScreen';
 import RegisterScreen from './app/screens/RegisterScreen';
+import ListingEditScreen from './app/screens/ListingEditScreen';
 
 export default App = () => {
   console.log('App executed');
@@ -86,7 +87,8 @@ const [category, setCategory] = useState(categories[0])
         />
       </ComponentStage> */}
       {/* <LoginScreen /> */}
-      <RegisterScreen />
+      {/* <RegisterScreen /> */}
+      <ListingEditScreen />
     </GestureHandlerRootView>
 
     // TODO: pulse circle component: extract to components 
