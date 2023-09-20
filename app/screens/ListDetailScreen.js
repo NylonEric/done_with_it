@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Image, StyleSheet } from 'react-native'
 import AppText from '../components/AppText';
 import { styles } from '../styles/styles';
-import ListItem from '../components/ListItem';
+import { ListItem } from '../components/lists';
 
 export default function ListDetailScreen() {
   return (
