@@ -57,13 +57,22 @@ export const styles = StyleSheet.create({
   },
   listContainer: {
     flexDirection: "row",
+    alignItems: "center",
     padding: 15,
     backgroundColor: colors.white,
+    // width: "100%",
   },
   separator: {
     width: "100%",
     height: 1,
     backgroundColor: colors.light,
+  },
+  chevronContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    height: "100%",
+    // borderWidth: 1,
+    // borderColor: "pink",
   },
   closeIcon: {
     width: 50,
@@ -208,6 +217,7 @@ export const styles = StyleSheet.create({
     // borderWidth: 2,
   },
   detailsContainer: {
+    flex: 1,
     padding: 15,
     marginLeft: 10,
     justifyContent: "space-evenly",

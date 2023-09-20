@@ -42,6 +42,7 @@ export default function MessagesScreen() {
               <ListItemDeleteAction
                 onPress={() => handleDelete(item)}/>
             }
+            showChevrons
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
