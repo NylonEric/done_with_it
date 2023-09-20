@@ -1,8 +1,12 @@
 import React from 'react';
 import Screen from '../components/Screen';
-import { AppForm, AppFormField, SubmitButton } from '../components/Forms';
+import {
+  AppForm as Form,
+  AppFormField as FormField,
+  AppFormPicker as FormPicker,
+  SubmitButton
+} from '../components/Forms';
 import { validationSchemaListing } from '../config/validation';
-import AppFormPicker from '../components/AppFormPicker';
 
 const categories = [
   {label: "Furniture", value: 1},
@@ -20,7 +24,7 @@ export default function ListingEditScreen() {
 
   return (
     <Screen>
-      <AppForm
+      <Form
         initialValues={initialValues}
         validationSchema={validationSchemaListing}
         onSubmit={(values, { resetForm }) => {
@@ -29,7 +33,7 @@ export default function ListingEditScreen() {
         }}
       > 
       {/* // TODO: not shift fields with error messages? */}
-        <AppFormField 
+        <FormField 
           maxLength={255}
           name="title"
           icon=""
@@ -39,7 +43,7 @@ export default function ListingEditScreen() {
           keyboardType="default"
           textContentType="none" 
         />
-        <AppFormField 
+        <FormField 
           maxLength={10}
           name="price"
           icon=""
@@ -49,12 +53,12 @@ export default function ListingEditScreen() {
           keyboardType="numeric"
           textContentType="none"
         />
-        <AppFormPicker
+        <FormPicker
           name="category"
           items={categories}
           placeholder="Category"
         />
-        <AppFormField
+        <FormField
           maxLength={255}
           multiline
           name="description"
@@ -62,7 +66,7 @@ export default function ListingEditScreen() {
           placeholder="Description"
         />
         <SubmitButton title="Post" />
-      </AppForm>
+      </Form>
     </Screen>
   )
 };
