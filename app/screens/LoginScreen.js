@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 
 import Screen from '../components/Screen';
-import { AppForm, AppFormField, SubmitButton } from '../components/Forms';
+import { AppForm, AppFormField, SubmitButton } from '../components/forms';
 import { validationSchemaLogin } from '../config/validation';
 
 export default function LoginScreen() {

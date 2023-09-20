@@ -5,7 +5,7 @@ import {
   AppFormField as FormField,
   AppFormPicker as FormPicker,
   SubmitButton
-} from '../components/Forms';
+} from '../components/forms';
 import { validationSchemaListing } from '../config/validation';
 
 const categories = [

@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import Screen from '../components/Screen'
 import { styles } from '../styles/styles'
-import { AppForm, AppFormField, SubmitButton } from '../components/Forms';
+import { AppForm, AppFormField, SubmitButton } from '../components/forms';
 import { validationSchemaRegister } from '../config/validation';
 
 const RegistrerScreen = () => {
