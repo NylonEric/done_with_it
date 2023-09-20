@@ -10,7 +10,7 @@ export default function AppPicker({ icon, items, onSelectItem, placeholder, sele
   const [modalVisible, setModalVisible] = useState(false);
   
   return (
-    <React.Fragment>
+    <>
       <Pressable onPress={() => setModalVisible(true)}>
         <View style={[styles.container]}>
           {icon && 
@@ -21,7 +21,11 @@ export default function AppPicker({ icon, items, onSelectItem, placeholder, sele
               style={styles.icon} 
             />
           }
-          <AppText style={styles.text}>{selectedItem ? selectedItem.label : placeholder}</AppText>
+          {selectedItem ? (
+            <AppText style={defaultStyles.text}>{selectedItem.label}</AppText>
+          ) : (
+            <AppText style={styles.placeholder}>{placeholder}</AppText>
+          )}
           <MaterialCommunityIcons
               name="chevron-down"
               size={20}
@@ -41,12 +45,13 @@ export default function AppPicker({ icon, items, onSelectItem, placeholder, sele
                 onPress={() => {
                   onSelectItem(item);
                   setModalVisible(false);
-                }} />
+                }}
+              />
             )}
           />
         </Screen>
       </Modal>
-    </React.Fragment>
+    </>
     )
 };
 
@@ -63,8 +68,12 @@ const styles = StyleSheet.create({
   icon: {
     marginRight: 10,
   },
+  placeholder: {
+    color: defaultStyles.colors.medium,
+    flex: 1,
+  },
   text: {
     flex: 1,
-    color: "grey",
+    color: defaultStyles.text,
   },
 });

@@ -12,8 +12,8 @@ export const validationSchemaLogin = Yup.object().shape({
 });
 
 export const validationSchemaListing = Yup.object().shape({
-  title: Yup.string().required().label("Title"),
-  price: Yup.number().required().label("Price"),
-  category: Yup.string().required().label("Category"),
-  description: Yup.string().required().label("Description"),
+  title: Yup.string().required(). min(1).label("Title"),
+  price: Yup.number().required().min(0.01).max(1000000).label("Price"),
+  category: Yup.object().required().nullable().label("Category"),
+  description: Yup.string().label("Description"),
 });

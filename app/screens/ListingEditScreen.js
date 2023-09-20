@@ -1,25 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Screen from '../components/Screen';
 import { AppForm, AppFormField, SubmitButton } from '../components/Forms';
 import { validationSchemaListing } from '../config/validation';
-import AppPicker from '../components/AppPicker';
 import AppFormPicker from '../components/AppFormPicker';
 
 const categories = [
   {label: "Furniture", value: 1},
   {label: "Clothing", value: 2},
-  {label: "Cameras", value: 3}
+  {label: "Cameras", value: 3},
 ];
 
 export default function ListingEditScreen() {
   const initialValues = {
     title: '',
     price: '',
-    category: '',
+    category: null,
     description: '',
   };
-
-  const [category, setCategory] = useState(null);
 
   return (
     <Screen>
@@ -31,8 +28,9 @@ export default function ListingEditScreen() {
           resetForm({values: ''});
         }}
       > 
-      {/* // TODO: need to not shift fields with error messages? */}
+      {/* // TODO: not shift fields with error messages? */}
         <AppFormField 
+          maxLength={255}
           name="title"
           icon=""
           placeholder="Title"
@@ -42,6 +40,7 @@ export default function ListingEditScreen() {
           textContentType="none" 
         />
         <AppFormField 
+          maxLength={10}
           name="price"
           icon=""
           placeholder="Price"
@@ -51,21 +50,17 @@ export default function ListingEditScreen() {
           textContentType="none"
         />
         <AppFormPicker
-          label="category"
-          selectedItem={category}
-          onSelectItem={item => setCategory(item)}
-          icon=""
+          name="category"
           items={categories}
           placeholder="Category"
         />
-        {/* <AppPicker
-          label="Cat"
-          selectedItem={category}
-          onSelectItem={item => setCategory(item)}
-          icon=""
-          items={categories}
-          placeholder="Category"
-        /> */}
+        <AppFormField
+          maxLength={255}
+          multiline
+          name="description"
+          numberofLines={3}
+          placeholder="Description"
+        />
         <SubmitButton title="Post" />
       </AppForm>
     </Screen>

@@ -1,5 +1,5 @@
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
+import { TouchableOpacity } from 'react-native'
 import AppText from './AppText'
 import defaultStyles from '../config/styles';
 
@@ -8,11 +8,12 @@ export default function PickerItem({ label, onPress }) {
    <TouchableOpacity onPress={onPress}>
     <AppText style={defaultStyles.text}>{label}</AppText>
    </TouchableOpacity>
-  )
+  );
 };
 
-const styles = StyleSheet.create({
-  text: {
-    padding: 20,
-  }
-});
+// TODO: combine and abstract styles
+// const styles = StyleSheet.create({
+//   text: {
+//     padding: 20,
+//   }
+// });
