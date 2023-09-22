@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { View, Text, Switch } from 'react-native'
-import Screen from './Screen';
 
 export default function AppSwitch() {
   const [isNew, setIsNew] = useState(false);

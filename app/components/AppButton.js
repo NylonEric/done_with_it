@@ -4,7 +4,7 @@ import colors from '../config/colors';
 
 const AppButton = ({title, onPress, style}) => {
   return(
-    <Pressable onPress={onPress} style={({ pressed} ) => [
+    <Pressable onPress={onPress} style={({ pressed } ) => [
         styles.button,
         style,
         { opacity: pressed ? 0.5 : 1.0 }
