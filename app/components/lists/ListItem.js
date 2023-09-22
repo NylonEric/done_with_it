@@ -25,8 +25,8 @@ export default function ListItem({
           {IconComponent}
           {image && <Image source={image} style={styles.listImage}/>}
           <View style={[styles.detailsContainer]}>
-            <AppText style={styles.userTitle}>{title}</AppText>
-            {subTitle && <AppText style={styles.userSubTitle}>{subTitle}</AppText>}
+            <AppText style={styles.userTitle} numberOfLines={1}>{title}</AppText>
+            {subTitle && <AppText style={styles.userSubTitle} numberOfLines={2}>{subTitle}</AppText>}
           </View>
           <View style={styles.chevronContainer}>
             {showChevrons && <Chevron direction="right" />}
