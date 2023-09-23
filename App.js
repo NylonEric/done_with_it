@@ -67,7 +67,7 @@ const [category, setCategory] = useState(categories[0])
       {/* <CardStage/> */}
       {/* <ListDetailScreen/> */}
       {/* <IconCanvas/> */}
-      <MessagesScreen/>
+      {/* <MessagesScreen/> */}
       {/* <AccountScreen/> */}
       {/* <ListingsScreen /> */}
       {/* <AppSwitch /> */}
@@ -88,7 +88,7 @@ const [category, setCategory] = useState(categories[0])
       </ComponentStage> */}
       {/* <LoginScreen /> */}
       {/* <RegisterScreen /> */}
-      {/* <ListingEditScreen /> */}
+      <ListingEditScreen />
     </GestureHandlerRootView>
 
     // TODO: pulse circle component: extract to components 

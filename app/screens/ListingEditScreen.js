@@ -52,11 +52,13 @@ export default function ListingEditScreen() {
           autoCorrect={false}
           keyboardType="numeric"
           textContentType="none"
+          width={120}
         />
         <FormPicker
           name="category"
           items={categories}
           placeholder="Category"
+          width="50%"
         />
         <FormField
           maxLength={255}
