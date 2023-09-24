@@ -4,7 +4,7 @@
     "slug": "done_with_it",
     "description": "marketplace demo app",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
     "splash": {
