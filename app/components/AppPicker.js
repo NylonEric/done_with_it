@@ -52,9 +52,10 @@ export default function AppPicker({
             renderItem={({ item }) => (
               <PickerItemComponent
                 item={item}
+                label={item.label}
                 onPress={() => {
-                  onSelectItem(item);
                   setModalVisible(false);
+                  onSelectItem(item);
                 }}
               />
             )}
