@@ -6,13 +6,22 @@ import defaultStyles from '../config/styles';
 import Screen from './Screen';
 import PickerItem from './PickerItem';
 
-export default function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
+export default function AppPicker({
+  icon,
+  items,
+  numberOfColumns = 1,
+  onSelectItem,
+  PickerItemComponent = PickerItem,
+  placeholder,
+  selectedItem,
+  width = "100%",
+}) {
   const [modalVisible, setModalVisible] = useState(false);
   
   return (
     <>
       <Pressable onPress={() => setModalVisible(true)}>
-        <View style={[styles.container]}>
+        <View style={[styles.container, {width}]}>
           {icon && 
             <MaterialCommunityIcons
               name={icon}
@@ -39,12 +48,14 @@ export default function AppPicker({ icon, items, onSelectItem, placeholder, sele
           <FlatList
             data={items}
             keyExtractor={item => item.value.toString()}
+            numColumns={numberOfColumns}
             renderItem={({ item }) => (
-              <PickerItem
+              <PickerItemComponent
+                item={item}
                 label={item.label}
                 onPress={() => {
-                  onSelectItem(item);
                   setModalVisible(false);
+                  onSelectItem(item);
                 }}
               />
             )}
@@ -60,10 +71,9 @@ const styles = StyleSheet.create({
     backgroundColor: defaultStyles.colors.light,
     borderRadius: 25,
     flexDirection: "row",
-    width: "100%",
     padding: 15,
     marginVertical: 10,
-    alignItems: "center",
+    // alignItems: "center",
   },
   icon: {
     marginRight: 10,
