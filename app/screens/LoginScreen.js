@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 
 import Screen from '../components/Screen';
-import { AppForm, AppFormField, SubmitButton } from '../components/forms';
+import { Form, FormField, SubmitButton } from '../components/forms';
 import { validationSchemaLogin } from '../config/validation';
 
 export default function LoginScreen() {
@@ -11,7 +11,7 @@ export default function LoginScreen() {
   return (
     <Screen style={styles.container}>
       <Image style={styles.logo} source={require('../assets/logo-red.png')}></Image>
-      <AppForm
+      <Form
         initialValues={initialValues}
         onSubmit={(values, { resetForm }) => {
           console.log(values);
@@ -19,7 +19,7 @@ export default function LoginScreen() {
         }}
         validationSchema={validationSchemaLogin}
       >
-        <AppFormField
+        <FormField
           name="email"
           icon="email"
           placeholder="Email"
@@ -28,7 +28,7 @@ export default function LoginScreen() {
           keyboardType="email-address"
           textContentType="emailAddress"
         />
-        <AppFormField
+        <FormField
           name="password"
           icon="lock"
           placeholder="Password"
@@ -39,7 +39,7 @@ export default function LoginScreen() {
           secureTextEntry
         />
         <SubmitButton title="Login" />
-      </AppForm>
+      </Form>
     </Screen>
   )
 };

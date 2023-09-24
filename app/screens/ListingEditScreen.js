@@ -2,9 +2,9 @@ import React from 'react';
 
 import Screen from '../components/Screen';
 import {
-  AppForm as Form,
-  AppFormField as FormField,
-  AppFormPicker as FormPicker,
+  Form,
+  FormField,
+  FormPicker,
   SubmitButton
 } from '../components/forms';
 import { validationSchemaListing } from '../config/validation';

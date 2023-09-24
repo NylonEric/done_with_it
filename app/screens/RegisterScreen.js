@@ -1,16 +1,16 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+
 import Screen from '../components/Screen'
 import { styles } from '../styles/styles'
-import { AppForm, AppFormField, SubmitButton } from '../components/forms';
+import { Form, FormField, SubmitButton } from '../components/forms';
 import { validationSchemaRegister } from '../config/validation';
 
-const RegistrerScreen = () => {
+const RegisterScreen = () => {
   const initialValues={ name: '', email: '', password: '' };
 
   return (
     <Screen style={styles.screen}>
-      <AppForm
+      <Form
         initialValues={initialValues}
         onSubmit={(values, { resetForm }) => {
           console.log(values);
@@ -18,7 +18,7 @@ const RegistrerScreen = () => {
         }}
         validationSchema={validationSchemaRegister}
       >
-        <AppFormField
+        <FormField
           name="name"
           icon="account"
           placeholder="Name"
@@ -27,7 +27,7 @@ const RegistrerScreen = () => {
           keyboardType="default"
           textContentType="name"
         />
-        <AppFormField
+        <FormField
           name="email"
           icon="email"
           placeholder="Email"
@@ -36,7 +36,7 @@ const RegistrerScreen = () => {
           keyboardType="email-address"
           textContentType="emailAddress"
         />
-        <AppFormField
+        <FormField
           name="password"
           icon="lock"
           placeholder="Password"
@@ -47,9 +47,9 @@ const RegistrerScreen = () => {
           secureTextEntry
         />
         <SubmitButton title="Register" />  
-      </AppForm>
+      </Form>
     </Screen>
   )
 };
 
-export default RegistrerScreen;
+export default RegisterScreen;

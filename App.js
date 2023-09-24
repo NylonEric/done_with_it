@@ -14,7 +14,7 @@ import {
   TouchableOpacity,
   TouchableNativeFeedback,
   TouchableHighlight,
-  Button,
+  // Button,
   Dimensions,
   useWindowDimensions
 } from 'react-native';
@@ -24,7 +24,7 @@ import Screen from './app/components/Screen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import StylePracticeCanvas from './app/screens/StylePracticeCanvas';
-import AppButton from './app/components/AppButton';
+import Button from './app/components/Button';
 import CardStage from './app/screens/CardStage';
 import ListDetailScreen from './app/screens/ListDetailScreen';
 import MessagesScreen from './app/screens/MessagesScreen';
@@ -32,10 +32,9 @@ import IconCanvas from './app/screens/IconCanvas';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingsScreen from './app/screens/ListingsScreen';
-import TextInput from './app/components/AppTextInput';
-import AppTextInput from './app/components/AppTextInput';
-import AppSwitch from './app/components/AppSwitch';
-import AppPicker from './app/components/AppPicker';
+import TextInput from './app/components/TextInput';
+import Switch from './app/components/Switch';
+import Picker from './app/components/Picker';
 import ComponentStage from './app/screens/ComponentStage';
 import LoginScreen from './app/screens/LoginScreen';
 import RegisterScreen from './app/screens/RegisterScreen';
@@ -63,22 +62,22 @@ const [category, setCategory] = useState(categories[0])
       {/* <WelcomeScreen/> */}
       {/* <ViewImageScreen/> */}
       {/* <StylePracticeCanvas/> */}
-      {/* <AppButton title="Login" onPress={() => console.log('here is button')}/> */}
+      {/* <Button title="Login" onPress={() => console.log('here is button')}/> */}
       {/* <CardStage/> */}
       {/* <ListDetailScreen/> */}
       {/* <IconCanvas/> */}
       {/* <MessagesScreen/> */}
       {/* <AccountScreen/> */}
       {/* <ListingsScreen /> */}
-      {/* <AppSwitch /> */}
+      {/* <Switch /> */}
       {/* <ComponentStage>
-        <AppPicker
+        <Picker
           selectedItem={category}
           onSelectItem={item => setCategory(item)}
           icon="apps"
           items={categories}
           placeholder="Category" />
-        <AppTextInput
+        <TextInput
           icon="email"
           placeholder="First Name"
           // keyboardType='default'

@@ -1,7 +1,7 @@
 import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Icon from './Icon'
-import AppText from './AppText';
+import Text from './Text';
 
 const CategoryPickerItem = ({ item, onPress }) => {
   return (
@@ -9,7 +9,7 @@ const CategoryPickerItem = ({ item, onPress }) => {
       <TouchableOpacity onPress={onPress}>
         <Icon backgroundColor={item.backgroundColor} name={item.icon} size={80}></Icon>
         <View style={{flexDirection: "row"}}>
-          <AppText style={styles.label}>{item.label}</AppText>
+          <Text style={styles.label}>{item.label}</Text>
         </View>
       </TouchableOpacity>
     </View>

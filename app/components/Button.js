@@ -2,7 +2,7 @@ import React from 'react';
 import { Pressable, Text, StyleSheet } from 'react-native';
 import colors from '../config/colors';
 
-const AppButton = ({title, onPress, style}) => {
+const Button = ({ title, onPress, style }) => {
   return(
     <Pressable onPress={onPress} style={({ pressed } ) => [
         styles.button,
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AppButton;
+export default Button;

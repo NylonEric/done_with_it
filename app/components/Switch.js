@@ -10,4 +10,4 @@ export default function AppSwitch() {
       <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} />
     </View>
   )
-}
+};

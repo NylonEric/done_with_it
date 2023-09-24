@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { styles } from '../styles/styles';
-import AppText from '../components/AppText';
+import AppText from '../components/Text';
 import Icon from '../components/Icon';
 
 const StylePracticeCanvas = (props) => {
