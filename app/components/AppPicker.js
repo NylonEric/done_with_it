@@ -31,7 +31,7 @@ export default function AppPicker({
             />
           }
           {selectedItem ? (
-            <AppText style={defaultStyles.text}>{selectedItem.label}</AppText>
+            <AppText style={styles.text}>{selectedItem.label}</AppText>
           ) : (
             <AppText style={styles.placeholder}>{placeholder}</AppText>
           )}
@@ -73,7 +73,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 15,
     marginVertical: 10,
-    // alignItems: "center",
   },
   icon: {
     marginRight: 10,

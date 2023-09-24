@@ -8,8 +8,10 @@ const CategoryPickerItem = ({ item, onPress }) => {
     <View style={styles.container}>
       <TouchableOpacity onPress={onPress}>
         <Icon backgroundColor={item.backgroundColor} name={item.icon} size={80}></Icon>
+        <View style={{flexDirection: "row"}}>
+          <AppText style={styles.label}>{item.label}</AppText>
+        </View>
       </TouchableOpacity>
-      <AppText style={styles.label}>{item.label}</AppText>
     </View>
   );
 };
