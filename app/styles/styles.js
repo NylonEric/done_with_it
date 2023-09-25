@@ -143,7 +143,7 @@ export const styles = StyleSheet.create({
     padding: 20,
     alignItems: 'center',
     // display: 'flex ',
-    flexDirection: 'row',
+    // flexDirection: 'row',
     justifyContent: 'space-around',
     backgroundColor: 'white',
     // borderColor: 'red',
@@ -261,6 +261,8 @@ export const styles = StyleSheet.create({
     fontSize: 26,
     color: 'black',
     fontWeight: 'bold',
+    justifyContent: "center",
+    textAlign: "center",
   },
   circle: {
     width: 300,

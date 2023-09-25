@@ -1,7 +1,7 @@
 // inspired by: https://mobiledevtutorials.com/react-native-tinder-loading/
 
 import React, { useEffect, useState } from 'react';
-import { styles } from '../../app/styles/styles.js';
+import { styles } from '../styles/styles.js';
 import Animated, {
   Extrapolate,
   interpolate,
@@ -28,6 +28,7 @@ export const Pulse = ({ delay = 0, repeat }) => {
       )
     );
   }, []);
+
   const animatedStyles = useAnimatedStyle(() => {
     const opacity = interpolate(
       animation.value,
@@ -40,5 +41,5 @@ export const Pulse = ({ delay = 0, repeat }) => {
       transform: [{ scale: animation.value }],
     };
   });
-  return <Animated.View style={[styles.circle, animatedStyles]} />;
+  return <Animated.View style={[styles.circle, animatedStyles]} />
 };
